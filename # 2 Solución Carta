@@ -1,0 +1,8 @@
+function listGifts(carta) {
+const separatedWords = carta.split(' ');
+const filteredWords = separatedWords.filter(
+(r) => r.charAt(0) !== '_' && r.charAt(0) !== '');
+const res = {};
+filteredWords.map(s => { res[s] = (res[s]? res[s]+1 : 1 )});
+return res
+}
